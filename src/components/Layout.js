@@ -1,5 +1,5 @@
 import React from "react";
-// import NavBar from "./NavBar";
+import NavBar from "./NavBar";
 // import Footer from "./Footer";
 // import "../styles/global.css";
 
@@ -26,7 +26,7 @@ const navStyles = {
 const Layout = ({ pageTitle, children }) => {
     return (
         <div style={layoutStyles}>
-            {/* <NavBar style={navStyles} /> */}
+            <NavBar style={navStyles} />
             <title>{pageTitle}</title>
             <div style={contentStyles}>{children}</div>
             {/* <Footer /> */}
