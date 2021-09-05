@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
-// import "../styles/global.css";
+import "../styles/global.css";
 
 const layoutStyles = {
     margin: "0 auto",
