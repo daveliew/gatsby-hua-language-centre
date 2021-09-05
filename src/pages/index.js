@@ -1,5 +1,6 @@
 import * as React from "react";
 import { graphql } from "gatsby";
+import Layout from "../components/Layout";
 
 // styles
 
@@ -47,32 +48,32 @@ const heroHeadingAccentStyles = {
 // markup
 export default function IndexPage({ data }) {
     return (
-        // <Layout pageTitle="Home">
-        <main>
-            <title>Home Page</title>
-            <section style={heroStyles}>
-                <h1 style={heroHeadingStyles}>
-                    Learn Chinese
-                    <br />
-                    <span style={heroHeadingAccentStyles}>
-                        the Fun and Effective Way!
-                    </span>
-                </h1>
-            </section>
-            <hr />
-            <section style={sectionStyles}>
-                <h1 style={headingStyles}>
-                    <span style={headingAccentStyles}>Programmes</span>
-                </h1>
-                {/* <CustomizedAccordions /> */}
-            </section>
-            <hr />
-            <section style={sectionStyles}>
-                <h1 style={headingStyles}>Why Hua</h1>
-                {/* <MediaCard /> */}
-            </section>
-        </main>
-        // </Layout>
+        <Layout pageTitle="Home">
+            <main>
+                <title>Home Page</title>
+                <section style={heroStyles}>
+                    <h1 style={heroHeadingStyles}>
+                        Learn Chinese
+                        <br />
+                        <span style={heroHeadingAccentStyles}>
+                            the Fun and Effective Way!
+                        </span>
+                    </h1>
+                </section>
+                <hr />
+                <section style={sectionStyles}>
+                    <h1 style={headingStyles}>
+                        <span style={headingAccentStyles}>Programmes</span>
+                    </h1>
+                    {/* <CustomizedAccordions /> */}
+                </section>
+                <hr />
+                <section style={sectionStyles}>
+                    <h1 style={headingStyles}>Why Hua</h1>
+                    {/* <MediaCard /> */}
+                </section>
+            </main>
+        </Layout>
     );
 }
 
