@@ -1,6 +1,6 @@
 import React from "react";
 import NavBar from "./NavBar";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 // import "../styles/global.css";
 
 const layoutStyles = {
@@ -29,7 +29,7 @@ const Layout = ({ pageTitle, children }) => {
             <NavBar style={navStyles} />
             <title>{pageTitle}</title>
             <div style={contentStyles}>{children}</div>
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 };
