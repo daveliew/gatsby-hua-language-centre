@@ -5,7 +5,7 @@ import React from "react";
 //     faInstagramSquare,
 // } from "@fortawesome/free-brands-svg-icons";
 
-// import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 
 const sectionStyles = {
     display: "flex",
@@ -49,10 +49,10 @@ const Footer = () => {
                 </a>
                 Follow Us
                 <a href="https://www.facebook.com/hualanguage/">
-                    {/* <FaFacebookSquare size={25} /> */}
+                    <FaFacebookSquare size={25} />
                 </a>
                 <a href="https://www.instagram.com/hualanguage/">
-                    {/* <FaInstagramSquare size={25} /> */}
+                    <FaInstagramSquare size={25} />
                 </a>
                 {/* </Container> */}
             </div>
