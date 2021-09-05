@@ -8,6 +8,13 @@ module.exports = {
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-sharp",
         {
+            resolve: `gatsby-transformer-sharp`,
+            options: {
+                // The option defaults to true
+                checkSupportedExtensions: false,
+            },
+        },
+        {
             resolve: "gatsby-source-wordpress",
             options: {
                 url: "https://hua.com.sg/graphql",
@@ -18,12 +25,6 @@ module.exports = {
                 develop: {
                     //caches media files outside of Gatsby's default cache an thus allows them to persist through a cache reset.
                     hardCacheMediaFiles: true,
-                },
-                type: {
-                    Post: {
-                        limit:
-                            process.env.NODE_ENV === `development` ? 50 : 5000,
-                    },
                 },
             },
         },
