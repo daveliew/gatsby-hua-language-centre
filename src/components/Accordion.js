@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { styled, withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import MuiAccordion from "@material-ui/core/Accordion";
 import MuiAccordionSummary from "@material-ui/core/AccordionSummary";
 import MuiAccordionDetails from "@material-ui/core/AccordionDetails";
