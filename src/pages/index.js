@@ -2,6 +2,8 @@ import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import CustomizedAccordions from "../components/Accordion";
+import herobanner from "../images/herobanner.jpeg";
+import MediaCard from "../components/Card";
 
 // styles
 
@@ -29,7 +31,7 @@ const heroStyles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    // backgroundImage: `url(${herobanner})`,
+    backgroundImage: `url(${herobanner})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "auto",
 };
@@ -71,7 +73,7 @@ export default function IndexPage({ data }) {
                 <hr />
                 <section style={sectionStyles}>
                     <h1 style={headingStyles}>Why Hua</h1>
-                    {/* <MediaCard /> */}
+                    <MediaCard />
                 </section>
             </main>
         </Layout>
