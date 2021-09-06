@@ -7,15 +7,15 @@ const sectionStyles = {
     width: "100%",
     flexDirection: "column",
     padding: "1rem",
+    backgroundColor: "red",
 };
 
 const Container = styled.div`
     display: "inline-grid";
-    grid-template-columns: repeat(2, auto);
-    justify-content: space-around;
+    /* grid-template-columns: repeat(2, auto);
+    justify-content: space-around; */
     margin-bottom: "1rem";
     width: 30vw;
-    background-color: "red";
 `;
 
 const descriptionStyles = {

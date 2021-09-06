@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import CustomizedAccordions from "../components/Accordion";
 
 // styles
 
@@ -65,7 +66,7 @@ export default function IndexPage({ data }) {
                     <h1 style={headingStyles}>
                         <span style={headingAccentStyles}>Programmes</span>
                     </h1>
-                    {/* <CustomizedAccordions /> */}
+                    <CustomizedAccordions />
                 </section>
                 <hr />
                 <section style={sectionStyles}>
