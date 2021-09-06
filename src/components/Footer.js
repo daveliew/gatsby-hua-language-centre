@@ -1,10 +1,4 @@
 import React from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//     faFacebookSquare,
-//     faInstagramSquare,
-// } from "@fortawesome/free-brands-svg-icons";
-
 import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 
 const sectionStyles = {
@@ -24,12 +18,12 @@ const sectionStyles = {
 
 //! to style
 
-const containerStyles = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-around",
-    marginBottom: "1rem",
-};
+// const containerStyles = {
+//     display: "flex",
+//     flexDirection: "row",
+//     justifyContent: "space-around",
+//     marginBottom: "1rem",
+// };
 
 const descriptionStyles = {
     color: "#414042",
