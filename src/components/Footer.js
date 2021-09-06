@@ -1,29 +1,22 @@
 import React from "react";
+import styled from "styled-components";
 import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
 
 const sectionStyles = {
     display: "flex",
-    // minWidth: "30vw",
+    width: "100%",
     flexDirection: "column",
-    justifyContent: "center",
     padding: "1rem",
 };
 
-// const Container = styled.div`
-//     margin: 1rem;
-//     display: inline-grid;
-//     grid-template-columns: repeat(5, auto);
-//     width: 30vw;
-// `;
-
-//! to style
-
-// const containerStyles = {
-//     display: "flex",
-//     flexDirection: "row",
-//     justifyContent: "space-around",
-//     marginBottom: "1rem",
-// };
+const Container = styled.div`
+    display: "inline-grid";
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-around;
+    margin-bottom: "1rem";
+    width: 30vw;
+    background-color: "red";
+`;
 
 const descriptionStyles = {
     color: "#414042",
@@ -36,8 +29,7 @@ const descriptionStyles = {
 const Footer = () => {
     return (
         <footer style={sectionStyles}>
-            <div>
-                {/* <Container> */}
+            <Container>
                 <a href="https://hua.com.sg/privacy-policy/">
                     Privacy Policy |
                 </a>
@@ -48,11 +40,10 @@ const Footer = () => {
                 <a href="https://www.instagram.com/hualanguage/">
                     <FaInstagramSquare size={25} />
                 </a>
-                {/* </Container> */}
-            </div>
-            <p style={descriptionStyles}>
-                Copyright {new Date().getFullYear()} Hua Language Centre
-            </p>
+                <p style={descriptionStyles}>
+                    Copyright {new Date().getFullYear()} Hua Language Centre
+                </p>
+            </Container>
         </footer>
     );
 };
