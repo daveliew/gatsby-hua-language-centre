@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmy_gatsby_site=self.webpackChunkmy_gatsby_site||[]).push([[851],{9857:function(e,t,n){n.r(t);var l=n(7294);n(5444);t.default=function(e){return l.createElement("div",null,l.createElement("h1",null,e.title),l.createElement("div",{dangerouslySetInnerHTML:{__html:e.html}}))}}}]);
+//# sourceMappingURL=component---src-templates-post-js-a18abc69562ca6f38b3f.js.map

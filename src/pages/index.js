@@ -1,5 +1,5 @@
 import * as React from "react";
-// import { graphql } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 
 // styles
@@ -77,14 +77,14 @@ export default function IndexPage({ data }) {
     );
 }
 
-// export const pageQuery = graphql`
-//     query {
-//         allWpPost(filter: { date: { gte: "2021" } }) {
-//             nodes {
-//                 id
-//                 excerpt
-//                 content
-//             }
-//         }
-//     }
-// `;
+export const pageQuery = graphql`
+    query {
+        allWpPost(filter: { date: { gte: "2021" } }) {
+            nodes {
+                id
+                excerpt
+                content
+            }
+        }
+    }
+`;
