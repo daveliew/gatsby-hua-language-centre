@@ -39,12 +39,20 @@ const posts = ({ data }) => {
                             <p>{node.title}</p>
                             <div
                                 dangerouslySetInnerHTML={{
-                                    __html: node.content,
+                                    __html: node.excerpt,
                                 }}
                             />
                         </div>
                     ))}
                 </div>
+                {data.allWpPost.nodes.map((node) =>
+                    node?.acfPostSettings?.location?.map((location) => (
+                        <div style={cardStyles}>
+                            <h1>{location}</h1>
+                            <h3>Some added details</h3>
+                        </div>
+                    ))
+                )}
             </container>
         </Layout>
     );
@@ -57,9 +65,14 @@ export const pageQuery = graphql`
         allWpPost(filter: { date: { gte: "2021" } }) {
             nodes {
                 id
-                content
                 excerpt
                 title
+                acfPostSettings {
+                    fieldGroupName
+                    isDraft
+                    postCategory
+                    location
+                }
             }
         }
     }
