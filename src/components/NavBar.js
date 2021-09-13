@@ -5,8 +5,9 @@ import Logo from "../images/logo.png";
 // styles
 const sectionStyle = {
     display: "flex",
+    flexDirection: "column",
+    backgroundColor: "#ffffff",
     position: "sticky",
-
     top: 0,
     width: "100vw",
     padding: "0.5rem",
@@ -21,20 +22,19 @@ const linkContainerStyle = {
     flexDirection: "horizontal",
     justifyContent: "space-evenly",
     alignItems: "center",
-    marginTop: "1rem",
 };
 
 const linkStyle = {
     color: "#bf8370",
     display: "flex",
-    marginTop: "1rem",
-    marginBottom: "1rem",
-    // fontSize: "0.8rem",
+    marginTop: "0.5rem",
+    marginBottom: "0.5rem",
+    fontSize: "0.9rem",
 };
 
 const logoStyles = {
-    height: "8vh",
-    marginTop: "2rem",
+    height: "7vh",
+    marginTop: "1rem",
 };
 
 const activeStyles = {
@@ -43,11 +43,6 @@ const activeStyles = {
 
 // data
 const links = [
-    {
-        text: "HOME",
-        url: "/",
-        description: "",
-    },
     {
         text: "ABOUT",
         url: "/about",
