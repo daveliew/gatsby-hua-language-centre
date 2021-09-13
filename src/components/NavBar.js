@@ -6,6 +6,7 @@ import Logo from "../images/logo.png";
 const sectionStyle = {
     display: "flex",
     position: "sticky",
+
     top: 0,
     width: "100vw",
     padding: "0.5rem",
@@ -28,10 +29,16 @@ const linkStyle = {
     display: "flex",
     marginTop: "1rem",
     marginBottom: "1rem",
+    // fontSize: "0.8rem",
 };
 
 const logoStyles = {
-    height: "10vh",
+    height: "8vh",
+    marginTop: "2rem",
+};
+
+const activeStyles = {
+    color: "#f89773",
 };
 
 // data
@@ -85,7 +92,12 @@ const NavBar = () => {
                 <div style={linkContainerStyle}>
                     {links.map((link) => (
                         <span>
-                            <Link style={linkStyle} to={`${link.url}`}>
+                            <Link
+                                style={linkStyle}
+                                activeStyle={activeStyles}
+                                to={`${link.url}`}
+                                hover
+                            >
                                 {link.text}
                             </Link>
                         </span>
