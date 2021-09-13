@@ -15,8 +15,8 @@ body {
 }
 
 body {
-    background: radial-gradient(at top left, #f89773 0%, #ae6552 100%);
-    background-repeat: no-repeat;
+    /* background: radial-gradient(at top left, #f89773 0%, #ae6552 100%); */
+    /* background-repeat: no-repeat; */
 }
 
 h1 {

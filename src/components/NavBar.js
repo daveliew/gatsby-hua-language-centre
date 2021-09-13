@@ -9,11 +9,8 @@ const sectionStyle = {
     top: 0,
     width: "100vw",
     padding: "0.5rem",
-    // flexDirection: "column",
     alignItems: "center",
     justifyContent: "stretch",
-    // backgroundImage: `url(${Logo})`,
-    backgroundColor: "#fbac4c",
     zIndex: 100,
 };
 
@@ -27,8 +24,7 @@ const linkContainerStyle = {
 };
 
 const linkStyle = {
-    color: "#fef6f0",
-    fontWeight: "700",
+    color: "#bf8370",
     display: "flex",
     marginTop: "1rem",
     marginBottom: "1rem",
@@ -81,20 +77,22 @@ const links = [
 
 const NavBar = () => {
     return (
-        <nav style={sectionStyle}>
+        <>
             <a href="/">
                 <img src={Logo} alt="Hua Language Centre" style={logoStyles} />
             </a>
-            <div style={linkContainerStyle}>
-                {links.map((link) => (
-                    <span>
-                        <Link style={linkStyle} to={`${link.url}`}>
-                            {link.text}
-                        </Link>
-                    </span>
-                ))}
-            </div>
-        </nav>
+            <nav style={sectionStyle}>
+                <div style={linkContainerStyle}>
+                    {links.map((link) => (
+                        <span>
+                            <Link style={linkStyle} to={`${link.url}`}>
+                                {link.text}
+                            </Link>
+                        </span>
+                    ))}
+                </div>
+            </nav>
+        </>
     );
 };
 export default NavBar;
