@@ -3,21 +3,28 @@ import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import { header } from "../styles/news.module.css";
 
-const pageStyle = {
+const pageStyles = {
     display: "flex",
     flexDirection: "column",
     padding: "10rem",
     marginTop: "5rem",
 };
 
-const titleStyle = {
+const titleStyles = {
     marginTop: "3rem",
-    marginBottom: "3rem",
+    padding: "1rem",
+    backgroundColor: "#fef6f0",
+};
+
+const headerStyles = {
+    fontWeight: "500",
+    justifyContent: "centre",
+    marginBottom: "1rem",
 };
 
 const containerStyles = {
-    padding: "10rem",
-    backgroundColor: "#414042",
+    padding: "1rem",
+    backgroundColor: "orange",
 };
 
 const cardStyles = {
@@ -30,8 +37,16 @@ const cardStyles = {
 
 const posts = ({ data }) => {
     return (
-        <Layout pageTitle="Posts" style={pageStyle}>
-            <h1 style={titleStyle}>Hello From News Posts</h1>
+        <Layout pageTitle="Posts" style={pageStyles}>
+            <container style={titleStyles}>
+                <h1 style={headerStyles}>EXTRA, EXTRA, READ ALL ABOUT IT!</h1>
+                <p>
+                    Read more about our current affairs and upcoming programs.
+                    We have bite-sized Mandarin classes for those who want a
+                    quick read. Do have a browse, and do let us know if there is
+                    anything you would like us to write on.
+                </p>
+            </container>
             <container style={containerStyles}>
                 <div className={header}>
                     {data.allWpPost.nodes.map((node) => (
