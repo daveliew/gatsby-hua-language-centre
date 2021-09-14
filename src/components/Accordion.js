@@ -10,7 +10,6 @@ import { FaInfoCircle } from "react-icons/fa";
 
 const Accordion = withStyles({
     root: {
-        // border: "1px solid #fbac4c",
         backgroundColor: "#ed7d67",
         boxShadow: "none",
         "&:not(:last-child)": {
@@ -58,7 +57,7 @@ export default function CustomizedAccordions() {
     };
 
     return (
-        <div>
+        <>
             <Accordion
                 square
                 expanded={expanded === "panel1"}
@@ -128,6 +127,6 @@ export default function CustomizedAccordions() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-        </div>
+        </>
     );
 }

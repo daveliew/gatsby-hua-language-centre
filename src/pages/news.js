@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import { header } from "../styles/news.module.css";
+import { Button } from "@material-ui/core";
 
 const pageStyles = {
     display: "flex",
@@ -11,7 +12,7 @@ const pageStyles = {
 const titleStyles = {
     padding: "2rem",
     backgroundColor: "#fef6f0",
-    maxWidth: "100%",
+    maxWidth: "100vw",
     width: "100%",
     textAlign: "center",
     justifyContent: "center",
@@ -60,6 +61,9 @@ const Posts = ({ data }) => {
                                     __html: node.excerpt,
                                 }}
                             />
+                            <Button onClick={() => setClicked(true)}>
+                                Learn more
+                            </Button>
                         </div>
                     ))}
                 </div>

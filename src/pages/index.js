@@ -43,7 +43,16 @@ const headingAccentStyles = {
     color: "#414042",
 };
 
-const sectionStyles = {
+const programmeStyles = {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "30vh",
+    padding: "5rem 10rem",
+};
+
+const vpStyles = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
@@ -68,14 +77,14 @@ export default function IndexPage({ data }) {
                     </h1>
                 </hero>
                 <hr />
-                <section style={sectionStyles}>
+                <section style={programmeStyles}>
                     <h1 style={headingStyles}>
                         <span style={headingAccentStyles}>Programmes</span>
                     </h1>
                     <CustomizedAccordions />
                 </section>
                 <hr />
-                <section style={sectionStyles}>
+                <section style={vpStyles}>
                     <h1 style={headingStyles}>Why Hua</h1>
                     <MediaCard />
                 </section>

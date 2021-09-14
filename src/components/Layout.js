@@ -6,6 +6,8 @@ import "../styles/global.css";
 const layoutStyles = {
     display: "flex",
     flexDirection: "column",
+    maxWidth: "100vw",
+    width: "100%",
 };
 
 const bodyStyles = {
