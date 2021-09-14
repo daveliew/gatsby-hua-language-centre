@@ -18,8 +18,8 @@ const sectionStyles = {
 };
 
 const logoStyles = {
-    height: "7vh",
     marginTop: "1rem",
+    height: "7vh",
 };
 
 const linkContainerStyles = {

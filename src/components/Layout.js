@@ -6,14 +6,14 @@ import "../styles/global.css";
 const layoutStyles = {
     display: "flex",
     flexDirection: "column",
-    maxWidth: "100vw",
-    width: "100%",
 };
 
 const bodyStyles = {
     display: "flex",
     flexDirection: "column",
     minHeight: "80vh",
+    width: "100%",
+    maxWidth: "100vw",
     justifyContent: "space-between",
 };
 
