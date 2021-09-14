@@ -40,8 +40,8 @@ const heroHeadingStyles = {
     marginTop: "40vh",
     marginBottom: "2rem",
     fontSize: "3rem",
-    // backgroundColor: "#f0ede9",
-    // opacity: "0.9",
+    color: "#2da64e",
+    textShadow: "2px 2px #414042",
 };
 
 const heroHeadingAccentStyles = {
@@ -54,7 +54,7 @@ export default function IndexPage({ data }) {
         <Layout pageTitle="Home">
             <main>
                 <title>Home Page</title>
-                <section style={heroStyles}>
+                <hero style={heroStyles}>
                     <h1 style={heroHeadingStyles}>
                         Learn Chinese
                         <br />
@@ -62,7 +62,7 @@ export default function IndexPage({ data }) {
                             the Fun and Effective Way!
                         </span>
                     </h1>
-                </section>
+                </hero>
                 <hr />
                 <section style={sectionStyles}>
                     <h1 style={headingStyles}>

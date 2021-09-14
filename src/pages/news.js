@@ -6,8 +6,7 @@ import { header } from "../styles/news.module.css";
 const pageStyles = {
     display: "flex",
     flexDirection: "column",
-    padding: "10rem",
-    marginTop: "5rem",
+    // padding: "10rem",
 };
 
 const titleStyles = {

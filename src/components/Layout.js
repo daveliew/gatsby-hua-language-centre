@@ -14,12 +14,10 @@ const contentStyles = {
     flexDirection: "column",
 };
 
-const navStyles = {};
-
 const Layout = ({ pageTitle, children }) => {
     return (
         <div style={layoutStyles}>
-            <NavBar style={navStyles} />
+            <NavBar />
             <title>{pageTitle}</title>
             <div style={contentStyles}>{children}</div>
             <Footer />
