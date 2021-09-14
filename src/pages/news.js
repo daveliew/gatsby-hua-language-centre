@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
 import { header } from "../styles/news.module.css";
@@ -12,13 +12,15 @@ const pageStyles = {
 
 const titleStyles = {
     marginTop: "3rem",
-    padding: "1rem",
+    padding: "2rem",
     backgroundColor: "#fef6f0",
+    width: "100%",
+    textAlign: "center",
+    justifyContent: "center",
 };
 
 const headerStyles = {
     fontWeight: "500",
-    justifyContent: "centre",
     marginBottom: "1rem",
 };
 
@@ -35,7 +37,9 @@ const cardStyles = {
     border: "10px solid #2da64e",
 };
 
-const posts = ({ data }) => {
+const Posts = ({ data }) => {
+    const [clicked, setClicked] = useState(false);
+
     return (
         <Layout pageTitle="Posts" style={pageStyles}>
             <container style={titleStyles}>
@@ -43,8 +47,9 @@ const posts = ({ data }) => {
                 <p>
                     Read more about our current affairs and upcoming programs.
                     We have bite-sized Mandarin classes for those who want a
-                    quick read. Do have a browse, and do let us know if there is
-                    anything you would like us to write on.
+                    quick read. <br />
+                    Do have a browse, and do let us know if there is anything
+                    you would like us to write on.
                 </p>
             </container>
             <container style={containerStyles}>
@@ -73,7 +78,7 @@ const posts = ({ data }) => {
     );
 };
 
-export default posts;
+export default Posts;
 
 export const pageQuery = graphql`
     query LatestPosts {

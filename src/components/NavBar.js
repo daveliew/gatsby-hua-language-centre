@@ -9,11 +9,16 @@ const sectionStyle = {
     backgroundColor: "#ffffff",
     position: "sticky",
     top: 0,
-    width: "100vw",
-    padding: "0.5rem",
+    width: "100%",
+    padding: "1rem",
     alignItems: "center",
     justifyContent: "stretch",
     zIndex: 100,
+};
+
+const logoStyles = {
+    height: "7vh",
+    marginTop: "1rem",
 };
 
 const linkContainerStyle = {
@@ -28,13 +33,6 @@ const linkStyle = {
     color: "#bf8370",
     display: "flex",
     marginTop: "0.5rem",
-    marginBottom: "0.5rem",
-    fontSize: "0.9rem",
-};
-
-const logoStyles = {
-    height: "7vh",
-    marginTop: "1rem",
 };
 
 const activeStyles = {
@@ -47,7 +45,7 @@ const links = [
         text: "ABOUT",
         url: "/about",
         description:
-            "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
+            "Learn Chinese the Fun and Effective way! For Ages 2 and up.",
     },
     {
         text: "NEWS",
@@ -67,8 +65,7 @@ const links = [
     {
         text: "LOCATIONS",
         url: "https://www.google.com/maps/dir/1.3256577,103.8116813/101+Thomson+Rd,+Hua+Language+Centre+(United+Square),+307591/@1.3235171,103.810198,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x31da19e8096a04b3:0x4202a8553eb29c4!2m2!1d103.8432704!2d1.317304",
-        description:
-            "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
+        description: "To link to Google API",
     },
     {
         text: "CONTACT",
