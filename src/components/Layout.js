@@ -9,9 +9,11 @@ const layoutStyles = {
 };
 
 const bodyStyles = {
-    backgroundColor: "red",
-    minHeight: "70vh",
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "80vh",
     justifyContent: "space-between",
+    backgroundColor: "red",
 };
 
 const contentStyles = {
@@ -29,8 +31,8 @@ const Layout = ({ pageTitle, children }) => {
                 <div style={bodyStyles}>
                     <title>{pageTitle}</title>
                     <div style={contentStyles}>{children}</div>
+                    <Footer />
                 </div>
-                <Footer />
             </div>
         </>
     );

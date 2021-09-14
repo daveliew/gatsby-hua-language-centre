@@ -7,16 +7,25 @@ const sectionStyles = {
     flexDirection: "column",
     width: "100%",
     padding: "1rem",
-    backgroundColor: "red",
+    backgroundColor: "#edeae2",
+    bottom: "0",
 };
 
-const Container = styled.div`
-    display: "inline-grid";
-    grid-template-columns: repeat(2, auto);
-    /* justify-content: space-around; */
-    margin-bottom: "1rem";
-    width: 30vw;
-`;
+const socialStyles = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-around",
+    flexWrap: "wrap",
+
+    width: "25vw",
+    padding: "0.5rem",
+};
+
+const socialIcons = {
+    display: "flex",
+    justifyContent: "space-between",
+    width: "5vw",
+};
 
 const descriptionStyles = {
     color: "#414042",
@@ -30,18 +39,23 @@ const Footer = () => {
     return (
         <>
             <footer style={sectionStyles}>
-                <Container>
-                    <a href="https://hua.com.sg/privacy-policy/">
-                        Privacy Policy |
-                    </a>
-                    Follow Us
-                    <a href="https://www.facebook.com/hualanguage/">
-                        <FaFacebookSquare size={25} />
-                    </a>
-                    <a href="https://www.instagram.com/hualanguage/">
-                        <FaInstagramSquare size={25} />
-                    </a>
-                </Container>
+                <div style={socialStyles}>
+                    <div>
+                        <a href="https://hua.com.sg/privacy-policy/">
+                            Privacy Policy
+                        </a>
+                    </div>
+                    <div>|</div>
+                    <div>Follow Us</div>
+                    <div style={socialIcons}>
+                        <a href="https://www.facebook.com/hualanguage/">
+                            <FaFacebookSquare size={20} />
+                        </a>
+                        <a href="https://www.instagram.com/hualanguagecentre/">
+                            <FaInstagramSquare size={20} />
+                        </a>
+                    </div>
+                </div>
                 <p style={descriptionStyles}>
                     Copyright {new Date().getFullYear()} Hua Language Centre
                 </p>
