@@ -6,11 +6,9 @@ import { header } from "../styles/news.module.css";
 const pageStyles = {
     display: "flex",
     flexDirection: "column",
-    // padding: "10rem",
 };
 
 const titleStyles = {
-    marginTop: "3rem",
     padding: "2rem",
     backgroundColor: "#fef6f0",
     width: "100%",

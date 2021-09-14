@@ -3,17 +3,17 @@ import { Link } from "gatsby";
 import Logo from "../images/logo.png";
 
 // styles
-const sectionStyle = {
+const sectionStyles = {
     display: "flex",
     flexDirection: "column",
     backgroundColor: "#ffffff",
     position: "sticky",
     top: 0,
+    zIndex: 100,
     width: "100%",
     padding: "1rem",
     alignItems: "center",
     justifyContent: "stretch",
-    zIndex: 100,
 };
 
 const logoStyles = {
@@ -21,7 +21,7 @@ const logoStyles = {
     marginTop: "1rem",
 };
 
-const linkContainerStyle = {
+const linkContainerStyles = {
     display: "flex",
     width: "70vw",
     flexDirection: "horizontal",
@@ -59,7 +59,7 @@ const links = [
     },
     {
         text: "SCHEDULE",
-        url: "https://hua.com.sg/class-schedule/",
+        url: "/schedule",
         description: "Link to API fetch",
     },
     {
@@ -80,8 +80,8 @@ const NavBar = () => {
             <a href="/">
                 <img src={Logo} alt="Hua Language Centre" style={logoStyles} />
             </a>
-            <nav style={sectionStyle}>
-                <div style={linkContainerStyle}>
+            <nav style={sectionStyles}>
+                <div style={linkContainerStyles}>
                     {links.map((link) => (
                         <span>
                             <Link

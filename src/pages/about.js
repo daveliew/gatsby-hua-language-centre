@@ -5,13 +5,18 @@ import { Typography } from "@material-ui/core";
 const pageStyles = {
     padding: "5rem",
     margin: "1rem",
+    backgroundColor: "#f89773",
 };
 
 const About = () => {
     return (
         <Layout pageTitle="About">
             <div style={pageStyles}>
-                <h1>Hello from About Page</h1>
+                <h1>
+                    Hua Language Centre - Singapore's Leading Chinese Enrichment
+                    and Tuition Centre
+                </h1>
+                <br />
                 <Typography>
                     Armed with an understanding of brain science, child
                     psychology and Chinese linguistics (and for older students,
