@@ -11,6 +11,7 @@ const pageStyles = {
 const titleStyles = {
     padding: "2rem",
     backgroundColor: "#fef6f0",
+    maxWidth: "100%",
     width: "100%",
     textAlign: "center",
     justifyContent: "center",

@@ -11,6 +11,7 @@ const sectionStyles = {
     top: 0,
     zIndex: 100,
     width: "100%",
+    maxWidth: "100vw",
     padding: "1rem",
     alignItems: "center",
     justifyContent: "stretch",

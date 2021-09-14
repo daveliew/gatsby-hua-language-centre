@@ -13,23 +13,22 @@ const bodyStyles = {
     flexDirection: "column",
     minHeight: "80vh",
     justifyContent: "space-between",
-    backgroundColor: "red",
 };
 
 const contentStyles = {
-    minHeight: "50vh",
     display: "flex",
     flexDirection: "column",
+    width: "100%",
+    minHeight: "50vh",
     marginTop: "1rem",
 };
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ children }) => {
     return (
         <>
             <div style={layoutStyles}>
                 <NavBar />
                 <div style={bodyStyles}>
-                    <title>{pageTitle}</title>
                     <div style={contentStyles}>{children}</div>
                     <Footer />
                 </div>

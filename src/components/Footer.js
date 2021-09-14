@@ -1,22 +1,17 @@
 import React from "react";
-import styled from "styled-components";
-import { FaFacebookSquare, FaInstagramSquare } from "react-icons/fa";
+import { FaFacebookSquare, FaInstagram } from "react-icons/fa";
 
 const sectionStyles = {
     display: "flex",
     flexDirection: "column",
-    width: "100%",
+    width: "100vw",
     padding: "1rem",
     backgroundColor: "#edeae2",
-    bottom: "0",
 };
 
 const socialStyles = {
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-around",
-    flexWrap: "wrap",
-
     width: "25vw",
     padding: "0.5rem",
 };
@@ -30,9 +25,7 @@ const socialIcons = {
 const descriptionStyles = {
     color: "#414042",
     fontSize: "0.8rem",
-    marginTop: 10,
-    marginBottom: 0,
-    lineHeight: 1.25,
+    marginTop: "0.5rem",
 };
 
 const Footer = () => {
@@ -52,7 +45,7 @@ const Footer = () => {
                             <FaFacebookSquare size={20} />
                         </a>
                         <a href="https://www.instagram.com/hualanguagecentre/">
-                            <FaInstagramSquare size={20} />
+                            <FaInstagram size={20} />
                         </a>
                     </div>
                 </div>

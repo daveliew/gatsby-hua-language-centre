@@ -6,23 +6,9 @@ import herobanner from "../images/herobanner.jpeg";
 import MediaCard from "../components/Card";
 
 // styles
-
-const headingStyles = {
-    marginTop: 0,
-    marginBottom: 64,
-    maxWidth: 320,
-};
-const headingAccentStyles = {
-    color: "#414042",
-};
-
-const sectionStyles = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    minHeight: "30vh",
-    padding: "5rem 10rem",
+const bodyStyles = {
+    width: "100%",
+    maxWidth: "100vw",
 };
 
 const heroStyles = {
@@ -48,11 +34,29 @@ const heroHeadingAccentStyles = {
     color: "#f89773",
 };
 
+const headingStyles = {
+    marginTop: 0,
+    marginBottom: 64,
+    maxWidth: 320,
+};
+const headingAccentStyles = {
+    color: "#414042",
+};
+
+const sectionStyles = {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    minHeight: "30vh",
+    padding: "5rem 10rem",
+};
+
 // markup
 export default function IndexPage({ data }) {
     return (
         <Layout pageTitle="Home">
-            <main>
+            <main style={bodyStyles}>
                 <title>Home Page</title>
                 <hero style={heroStyles}>
                     <h1 style={heroHeadingStyles}>
