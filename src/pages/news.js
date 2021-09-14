@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
-import { header } from "../styles/news.module.css";
 import { Button } from "@material-ui/core";
 
 const pageStyles = {
     display: "flex",
     flexDirection: "column",
     width: "100%",
+    backgroundColor: "#fef6f0",
 };
 
 const titleStyles = {
     padding: "2rem",
-    backgroundColor: "#fef6f0",
+
     textAlign: "center",
     justifyContent: "center",
     width: "100%",
+    maxWidth: "80vw",
 };
 
 const headerStyles = {
@@ -26,21 +27,47 @@ const headerStyles = {
 const containerStyles = {
     padding: "1rem",
     width: "100%",
+    maxWidth: "90vw",
     backgroundColor: "orange",
+    display: "inline-grid",
+    gridTemplateColumns: "repeat(4, 1fr)",
+    gridGap: "1em",
+    alignItems: "center",
 };
 
 const cardStyles = {
     boxShadow: "2px 2px",
-    margin: "2rem",
+    margin: "1rem",
     padding: "1rem",
     height: "30vh",
-    border: "10px solid #2da64e",
+    border: "5px solid #2da64e",
 };
 
 const Posts = ({ data }) => {
     const [clicked, setClicked] = useState(false);
 
-    return (
+    return clicked ? (
+        <Layout pageTitle="Posts">
+            <main style={pageStyles}>
+                <container style={titleStyles}>
+                    <h1 style={headerStyles}>Clicked</h1>
+                </container>
+                <container style={containerStyles}>
+                    <div>
+                        {data.allWpPost.nodes.map((node) => (
+                            <div style={cardStyles}>
+                                <h3>{node.title}</h3>
+                                <h6>{node?.acfPostSettings?.location}</h6>
+                                <Button onClick={() => setClicked(false)}>
+                                    Back
+                                </Button>
+                            </div>
+                        ))}
+                    </div>
+                </container>
+            </main>
+        </Layout>
+    ) : (
         <Layout pageTitle="Posts">
             <main style={pageStyles}>
                 <container style={titleStyles}>
@@ -56,22 +83,15 @@ const Posts = ({ data }) => {
                     </p>
                 </container>
                 <container style={containerStyles}>
-                    <div className={header}>
-                        {data.allWpPost.nodes.map((node) => (
-                            <div style={cardStyles}>
-                                <p>{node.title}</p>
-                                <div
-                                    dangerouslySetInnerHTML={{
-                                        __html: node.excerpt,
-                                    }}
-                                />
-                                <h6>{node?.acfPostSettings?.location}</h6>
-                                <Button onClick={() => setClicked(true)}>
-                                    Learn more
-                                </Button>
-                            </div>
-                        ))}
-                    </div>
+                    {data.allWpPost.nodes.map((node) => (
+                        <div style={cardStyles}>
+                            <p>{node.title}</p>
+                            <h6>{node?.acfPostSettings?.location}</h6>
+                            <Button onClick={() => setClicked(true)}>
+                                Learn more
+                            </Button>
+                        </div>
+                    ))}
                 </container>
             </main>
         </Layout>
@@ -82,7 +102,7 @@ export default Posts;
 
 export const pageQuery = graphql`
     query LatestPosts {
-        allWpPost(filter: { date: { gte: "2021" } }) {
+        allWpPost(filter: { date: { gte: "2019" } }) {
             nodes {
                 id
                 excerpt
