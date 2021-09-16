@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { graphql } from "gatsby";
-import { Button } from "@material-ui/core";
+import { Button, Card } from "@material-ui/core";
 
 const pageStyles = {
     display: "flex",
@@ -43,6 +43,10 @@ const cardStyles = {
     border: "5px solid #2da64e",
 };
 
+const chineseText = {
+    fontFamily: "ZCOOL KuaiLe",
+};
+
 const Posts = ({ data }) => {
     const [clicked, setClicked] = useState(false);
 
@@ -53,17 +57,19 @@ const Posts = ({ data }) => {
                     <h1 style={headerStyles}>Clicked</h1>
                 </container>
                 <container style={containerStyles}>
-                    <div>
-                        {data.allWpPost.nodes.map((node) => (
-                            <div style={cardStyles}>
-                                <h3>{node.title}</h3>
-                                <h6>{node?.acfPostSettings?.location}</h6>
-                                <Button onClick={() => setClicked(false)}>
-                                    Back
-                                </Button>
-                            </div>
-                        ))}
-                    </div>
+                    {data.allWpPost.nodes.map((node) => (
+                        <div style={cardStyles}>
+                            <h3>{node.title}</h3>
+                            <br />
+                            <p style={chineseText}>
+                                他们所有的设备和仪器彷佛都是有生命的。
+                            </p>
+                            <h6>{node?.acfPostSettings?.location}</h6>
+                            <Button onClick={() => setClicked(false)}>
+                                Back
+                            </Button>
+                        </div>
+                    ))}
                 </container>
             </main>
         </Layout>
