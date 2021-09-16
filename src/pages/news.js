@@ -59,10 +59,16 @@ const Posts = ({ data }) => {
                 <container style={containerStyles}>
                     {data.allWpPost.nodes.map((node) => (
                         <div style={cardStyles}>
-                            <h3>{node.title}</h3>
+                            <h3>{node?.title}</h3>
                             <br />
                             <p style={chineseText}>
                                 他们所有的设备和仪器彷佛都是有生命的。
+                            </p>
+                            <p>Locations: {node?.acfPostSettings?.location}</p>
+                            <p> Content: {node?.acfPostSettings?.content}</p>
+                            <p>
+                                from {node?.acfPostSettings?.startDate} to
+                                {node?.acfPostSettings?.endDate}
                             </p>
                             <h6>{node?.acfPostSettings?.location}</h6>
                             <Button onClick={() => setClicked(false)}>
@@ -92,7 +98,6 @@ const Posts = ({ data }) => {
                     {data.allWpPost.nodes.map((node) => (
                         <div style={cardStyles}>
                             <p>{node.title}</p>
-                            <h6>{node?.acfPostSettings?.location}</h6>
                             <Button onClick={() => setClicked(true)}>
                                 Learn more
                             </Button>
@@ -108,7 +113,7 @@ export default Posts;
 
 export const pageQuery = graphql`
     query LatestPosts {
-        allWpPost(filter: { date: { gte: "2019" } }) {
+        allWpPost(filter: { date: { gte: "2021" } }) {
             nodes {
                 id
                 excerpt
@@ -118,6 +123,9 @@ export const pageQuery = graphql`
                     isDraft
                     postCategory
                     location
+                    startDate
+                    endDate
+                    content
                 }
             }
         }
