@@ -53,12 +53,10 @@ const programmeStyles = {
 };
 
 const vpStyles = {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    minHeight: "30vh",
-    padding: "5rem 10rem",
+    display: "inline-grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateRows: "auto",
+    margin: "10vw",
 };
 
 // markup
@@ -84,9 +82,13 @@ export default function IndexPage({ data }) {
                     <CustomizedAccordions />
                 </section>
                 <hr />
-                <section style={vpStyles}>
-                    <h1 style={headingStyles}>Why Hua</h1>
-                    <MediaCard />
+                <section style={programmeStyles}>
+                    <h1 style={headingStyles}>
+                        <span style={headingAccentStyles}>Why Hua</span>
+                    </h1>
+                    <div style={vpStyles}>
+                        <MediaCard />
+                    </div>
                 </section>
             </main>
         </Layout>

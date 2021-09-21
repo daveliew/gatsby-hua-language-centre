@@ -12,11 +12,16 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 345,
-        height: "30vh",
+        maxWidth: "30vw",
+        height: "40vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        alignSelf: "flex-end",
+        backgroundColor: "#ed7d67",
     },
     media: {
-        height: 140,
+        height: "10vh",
     },
     title: {
         color: "#ae6552",
@@ -36,8 +41,8 @@ export default function MediaCard() {
                 <CardActionArea>
                     <CardMedia
                         className={classes.media}
-                        image="../images/logo.png"
-                        title="Contemplative Reptile"
+                        image="../images/icon.png"
+                        title="ValueProp"
                     />
                     <CardContent>
                         <Typography
