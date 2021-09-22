@@ -12,7 +12,6 @@ const pageStyles = {
 
 const titleStyles = {
     padding: "2rem",
-
     textAlign: "center",
     justifyContent: "center",
     width: "100%",
@@ -25,13 +24,13 @@ const headerStyles = {
 };
 
 const containerStyles = {
-    padding: "1rem",
-    width: "100%",
-    maxWidth: "90vw",
-    backgroundColor: "orange",
     display: "inline-grid",
     gridTemplateColumns: "repeat(4, 1fr)",
     gridGap: "1em",
+    padding: "1rem",
+    width: "100%",
+    maxWidth: "90vw",
+    backgroundColor: "#f89773",
     alignItems: "center",
 };
 
@@ -41,6 +40,7 @@ const cardStyles = {
     padding: "1rem",
     height: "30vh",
     border: "5px solid #2da64e",
+    fontFamily: "gaegu",
 };
 
 const chineseText = {
@@ -97,7 +97,7 @@ const Posts = ({ data }) => {
                 <container style={containerStyles}>
                     {data.allWpPost.nodes.map((node) => (
                         <div style={cardStyles}>
-                            <p>{node.title}</p>
+                            <h3>{node.title}</h3>
                             <Button onClick={() => setClicked(true)}>
                                 Learn more
                             </Button>
