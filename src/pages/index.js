@@ -58,14 +58,19 @@ const vpStyles = {
     justifyContent: "space-between",
     alignItems: "center",
     minHeight: "30vh",
+    marginTop: "5vh",
 };
 
 const vpCardStyles = {
-    display: "inline-grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gridTemplateRows: "auto",
-    margin: "1rem",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(20vw, 1fr))",
+    width: "max(200px,70vw)",
+    gap: "1rem",
+    padding: "1rem",
     marginBottom: "5vh",
+    justifyContent: "center",
+    alignContent: "center",
+    backgroundColor: "yellow",
 };
 
 // markup

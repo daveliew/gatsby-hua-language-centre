@@ -12,7 +12,7 @@ import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: "30vw",
+        width: "minmax(70vw, 100vw)",
         height: "40vh",
         display: "flex",
         flexDirection: "column",
