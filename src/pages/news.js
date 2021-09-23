@@ -61,8 +61,14 @@ const containerDetailedStyles = {
 };
 
 const postDetailedStyles = {
+    backgroundColor: "#fef6f0",
+    marginTop: "2rem",
+};
+
+const aboutHuaStyles = {
     fontSize: "0.8rem",
     marginTop: "2rem",
+    marginBottom: "2rem",
 };
 
 const Posts = ({ data }) => {
@@ -90,6 +96,9 @@ const Posts = ({ data }) => {
                                     style={{ height: "500px", width: "500px" }}
                                 />
                                 <h1>{node?.title}</h1>
+                                <h1 style={chineseText}>
+                                    {node?.acfPostSettings?.chineseText}
+                                </h1>
                                 <br />
                                 <div>
                                     <h3>Who: {node?.acfPostSettings?.who}</h3>
@@ -102,13 +111,33 @@ const Posts = ({ data }) => {
                                         Who: {node?.acfPostSettings?.location}
                                     </h3>
                                 </div>
-                                <p style={chineseText}>
-                                    {node?.acfPostSettings?.chineseText}
-                                </p>
-                                <hr />
+
                                 <div style={postDetailedStyles}>
                                     <p>{node?.acfPostSettings?.content}</p>
                                 </div>
+                                <br />
+                                <hr />
+                                <section style={aboutHuaStyles}>
+                                    About Hua Language Centre Established in
+                                    1992, Hua Language Centre is Singapore’s
+                                    Leading Chinese Enrichment and Tuition
+                                    Centre. We offer a wide range of Chinese
+                                    programmes and classes that cater to your
+                                    child’s various Mandarin needs. For close to
+                                    30 years, Hua Language centre has developed
+                                    and refined our own unique curriculum – we
+                                    make the learning of Chinese fun and
+                                    effective at the same time, through an
+                                    understanding of brain science, child
+                                    psychology, Chinese linguistics and
+                                    exam-taking strategies. Our Curriculum
+                                    Director’s passion for Chinese and desire to
+                                    help children master this increasingly
+                                    useful language has driven Hua Language
+                                    Centre to perfect our craft as your child’s
+                                    partner in his or her Mandarin Language
+                                    journey.
+                                </section>
 
                                 <Button onClick={handleClick}>Back</Button>
                             </div>
