@@ -34,13 +34,12 @@ const containerStyles = {
 };
 
 const cardStyles = {
-    boxShadow: "2px 2px",
+    boxShadow: "1px 1px",
     margin: "1rem",
     padding: ".5rem",
     height: "40vh",
-    border: "5px solid #2da64e",
+    border: "3px solid #2da64e",
     fontFamily: "gaegu",
-    backgroundColor: "#f89773",
 };
 
 const chineseText = {
@@ -54,6 +53,12 @@ const imageStyles = {
 
 const Posts = ({ data }) => {
     const [clicked, setClicked] = useState(false);
+    const [postID, setPostID] = useState(null);
+
+    const handleClick = () => {
+        setClicked(!clicked);
+        // setPostID(node.id);
+    };
 
     return clicked ? (
         <Layout pageTitle="Posts">
@@ -61,13 +66,14 @@ const Posts = ({ data }) => {
                 <container style={titleStyles}>
                     <h1 style={headerStyles}>Clicked</h1>
                 </container>
-                <container style={containerStyles}>
+                <p>{postID}</p>
+                <container>
                     {data.allWpPost.nodes.map((node) => (
                         <div style={cardStyles}>
                             <h6>{node?.title}</h6>
                             <br />
                             <p style={chineseText}>
-                                他们所有的设备和仪器彷佛都是有生命的。
+                                {node?.acfPostSettings?.chineseText}
                             </p>
                             <p>Locations: {node?.acfPostSettings?.location}</p>
                             <p> Content: {node?.acfPostSettings?.content}</p>
@@ -76,9 +82,7 @@ const Posts = ({ data }) => {
                                 {node?.acfPostSettings?.endDate}
                             </p>
                             <h6>{node?.acfPostSettings?.location}</h6>
-                            <Button onClick={() => setClicked(false)}>
-                                Back
-                            </Button>
+                            <Button onClick={handleClick}>Back</Button>
                         </div>
                     ))}
                 </container>
@@ -100,17 +104,15 @@ const Posts = ({ data }) => {
                     </p>
                 </container>
                 <container style={containerStyles}>
-                    {data.allWpPost.nodes.map((node) => (
+                    {data.allWpPost.nodes.map((node, i) => (
                         <div style={cardStyles}>
                             <img
                                 src={node?.featuredImage?.node?.mediaItemUrl}
                                 style={imageStyles}
                             />
-                            <h3>{node.title}</h3>
+                            <h3>{node?.title}</h3>
 
-                            <Button onClick={() => setClicked(true)}>
-                                Learn more
-                            </Button>
+                            <Button onClick={handleClick}>Learn more</Button>
                         </div>
                     ))}
                 </container>
