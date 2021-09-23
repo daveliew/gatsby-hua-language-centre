@@ -44,6 +44,7 @@ const cardStyles = {
 
 const chineseText = {
     fontFamily: "ZCOOL KuaiLe",
+    marginTop: "1rem",
 };
 
 const imageStyles = {
@@ -51,9 +52,22 @@ const imageStyles = {
     width: "200px",
 };
 
+const containerDetailedStyles = {
+    display: "flex",
+    padding: "1rem",
+    width: "100%",
+    maxWidth: "90vw",
+    alignItems: "center",
+};
+
+const postDetailedStyles = {
+    fontSize: "0.8rem",
+    marginTop: "2rem",
+};
+
 const Posts = ({ data }) => {
     const [clicked, setClicked] = useState(false);
-    const [postID, setPostID] = useState(null);
+    const [postID, setPostID] = useState("cG9zdDozMDE3");
 
     const handleClick = () => {
         setClicked(!clicked);
@@ -63,28 +77,42 @@ const Posts = ({ data }) => {
     return clicked ? (
         <Layout pageTitle="Posts">
             <main style={pageStyles}>
-                <container style={titleStyles}>
-                    <h1 style={headerStyles}>Clicked</h1>
-                </container>
-                <p>{postID}</p>
-                <container>
-                    {data.allWpPost.nodes.map((node) => (
-                        <div style={cardStyles}>
-                            <h6>{node?.title}</h6>
-                            <br />
-                            <p style={chineseText}>
-                                {node?.acfPostSettings?.chineseText}
-                            </p>
-                            <p>Locations: {node?.acfPostSettings?.location}</p>
-                            <p> Content: {node?.acfPostSettings?.content}</p>
-                            <p>
-                                from {node?.acfPostSettings?.startDate} to
-                                {node?.acfPostSettings?.endDate}
-                            </p>
-                            <h6>{node?.acfPostSettings?.location}</h6>
-                            <Button onClick={handleClick}>Back</Button>
-                        </div>
-                    ))}
+                <container style={titleStyles}></container>
+                <container style={containerDetailedStyles}>
+                    {data.allWpPost.nodes
+                        .filter((node) => node.id === postID)
+                        .map((node) => (
+                            <div>
+                                <img
+                                    src={
+                                        node?.featuredImage?.node?.mediaItemUrl
+                                    }
+                                    style={{ height: "500px", width: "500px" }}
+                                />
+                                <h1>{node?.title}</h1>
+                                <br />
+                                <div>
+                                    <h3>Who: {node?.acfPostSettings?.who}</h3>
+                                    <h3>
+                                        Date: {node?.acfPostSettings?.startDate}{" "}
+                                        - {node?.acfPostSettings?.endDate}
+                                    </h3>
+                                    <h3>Who: {node?.acfPostSettings?.time}</h3>
+                                    <h3>
+                                        Who: {node?.acfPostSettings?.location}
+                                    </h3>
+                                </div>
+                                <p style={chineseText}>
+                                    {node?.acfPostSettings?.chineseText}
+                                </p>
+                                <hr />
+                                <div style={postDetailedStyles}>
+                                    <p>{node?.acfPostSettings?.content}</p>
+                                </div>
+
+                                <Button onClick={handleClick}>Back</Button>
+                            </div>
+                        ))}
                 </container>
             </main>
         </Layout>
