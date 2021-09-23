@@ -118,17 +118,18 @@ const Posts = ({ data }) => {
                                 <br />
                                 <hr />
                                 <section style={aboutHuaStyles}>
-                                    About Hua Language Centre Established in
-                                    1992, Hua Language Centre is Singapore’s
-                                    Leading Chinese Enrichment and Tuition
-                                    Centre. We offer a wide range of Chinese
-                                    programmes and classes that cater to your
-                                    child’s various Mandarin needs. For close to
-                                    30 years, Hua Language centre has developed
-                                    and refined our own unique curriculum – we
-                                    make the learning of Chinese fun and
-                                    effective at the same time, through an
-                                    understanding of brain science, child
+                                    <strong>About Hua Language Centre </strong>
+                                    <br />
+                                    Established in 1992, Hua Language Centre is
+                                    Singapore’s Leading Chinese Enrichment and
+                                    Tuition Centre. We offer a wide range of
+                                    Chinese programmes and classes that cater to
+                                    your child’s various Mandarin needs. For
+                                    close to 30 years, Hua Language centre has
+                                    developed and refined our own unique
+                                    curriculum – we make the learning of Chinese
+                                    fun and effective at the same time, through
+                                    an understanding of brain science, child
                                     psychology, Chinese linguistics and
                                     exam-taking strategies. Our Curriculum
                                     Director’s passion for Chinese and desire to
