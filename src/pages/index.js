@@ -63,8 +63,8 @@ const vpStyles = {
 
 const vpCardStyles = {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(20vw, 1fr))",
-    width: "max(200px,70vw)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(100px, 20vw))",
+    width: "max(300px,70vw)",
     gap: "1rem",
     padding: "1rem",
     marginBottom: "5vh",
@@ -114,8 +114,7 @@ export const pageQuery = graphql`
         allWpPost(filter: { date: { gte: "2021" } }) {
             nodes {
                 id
-                excerpt
-                content
+                title
             }
         }
     }

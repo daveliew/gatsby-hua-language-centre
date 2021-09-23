@@ -24,27 +24,32 @@ const headerStyles = {
 };
 
 const containerStyles = {
-    display: "inline-grid",
-    gridTemplateColumns: "repeat(4, 1fr)",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(100px, 20vw))",
     gridGap: "1em",
     padding: "1rem",
     width: "100%",
     maxWidth: "90vw",
-    backgroundColor: "#f89773",
     alignItems: "center",
 };
 
 const cardStyles = {
     boxShadow: "2px 2px",
     margin: "1rem",
-    padding: "1rem",
-    height: "30vh",
+    padding: ".5rem",
+    height: "40vh",
     border: "5px solid #2da64e",
     fontFamily: "gaegu",
+    backgroundColor: "#f89773",
 };
 
 const chineseText = {
     fontFamily: "ZCOOL KuaiLe",
+};
+
+const imageStyles = {
+    height: "200px",
+    width: "200px",
 };
 
 const Posts = ({ data }) => {
@@ -59,7 +64,7 @@ const Posts = ({ data }) => {
                 <container style={containerStyles}>
                     {data.allWpPost.nodes.map((node) => (
                         <div style={cardStyles}>
-                            <h3>{node?.title}</h3>
+                            <h6>{node?.title}</h6>
                             <br />
                             <p style={chineseText}>
                                 他们所有的设备和仪器彷佛都是有生命的。
@@ -97,7 +102,12 @@ const Posts = ({ data }) => {
                 <container style={containerStyles}>
                     {data.allWpPost.nodes.map((node) => (
                         <div style={cardStyles}>
+                            <img
+                                src={node?.featuredImage?.node?.mediaItemUrl}
+                                style={imageStyles}
+                            />
                             <h3>{node.title}</h3>
+
                             <Button onClick={() => setClicked(true)}>
                                 Learn more
                             </Button>
@@ -119,13 +129,19 @@ export const pageQuery = graphql`
                 excerpt
                 title
                 acfPostSettings {
-                    fieldGroupName
-                    isDraft
                     postCategory
                     location
                     startDate
                     endDate
                     content
+                    chineseText
+                    time
+                    who
+                }
+                featuredImage {
+                    node {
+                        mediaItemUrl
+                    }
                 }
             }
         }
