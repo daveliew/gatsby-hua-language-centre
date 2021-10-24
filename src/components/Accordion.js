@@ -48,6 +48,11 @@ const AccordionDetails = withStyles((theme) => ({
     },
 }))(MuiAccordionDetails);
 
+const subtitleStyle = {
+    color: "#fef6f0",
+    fontWeight: "700",
+};
+
 export default function CustomizedAccordions() {
     const [expanded, setExpanded] = useState("panel1");
 
@@ -66,7 +71,9 @@ export default function CustomizedAccordions() {
                     aria-controls="panel1d-content"
                     id="panel1d-header"
                 >
-                    <Typography>Playgroup - 6 to 18 months</Typography>
+                    <Typography style={subtitleStyle}>
+                        Playgroup - 6 to 18 months
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
@@ -85,7 +92,9 @@ export default function CustomizedAccordions() {
                     aria-controls="panel2d-content"
                     id="panel2d-header"
                 >
-                    <Typography>Preschool - 3 to 6 years</Typography>
+                    <Typography style={subtitleStyle}>
+                        Preschool - 3 to 6 years
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
@@ -109,7 +118,9 @@ export default function CustomizedAccordions() {
                     aria-controls="panel3d-content"
                     id="panel3d-header"
                 >
-                    <Typography>Primary School - 7 to 12 years</Typography>
+                    <Typography style={subtitleStyle}>
+                        Primary School - 7 to 12 years
+                    </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>

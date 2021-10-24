@@ -70,7 +70,7 @@ const vpCardStyles = {
     marginBottom: "5vh",
     justifyContent: "center",
     alignContent: "center",
-    backgroundColor: "yellow",
+    backgroundColor: "#fef6f0",
 };
 
 // markup
