@@ -24,7 +24,7 @@ const useStyles = makeStyles({
         height: "10vh",
     },
     title: {
-        color: "#ae6552",
+        color: "#fff",
         fontWeight: "700",
     },
     links: {
@@ -51,7 +51,7 @@ export default function MediaCard() {
                             component="h2"
                             className={classes.title}
                         >
-                            Value Prop 1
+                            Best-in-class Curriculum
                         </Typography>
                         <Typography
                             variant="body2"
@@ -71,13 +71,6 @@ export default function MediaCard() {
                         color="secondary"
                         className={classes.links}
                     >
-                        Share
-                    </Button>
-                    <Button
-                        size="small"
-                        color="secondary"
-                        className={classes.links}
-                    >
                         Learn More
                     </Button>
                 </CardActions>
@@ -96,7 +89,7 @@ export default function MediaCard() {
                             component="h2"
                             className={classes.title}
                         >
-                            Value Prop 2
+                            30 Years of Experience
                         </Typography>
                         <Typography
                             variant="body2"
@@ -115,13 +108,6 @@ export default function MediaCard() {
                         color="secondary"
                         className={classes.links}
                     >
-                        Share
-                    </Button>
-                    <Button
-                        size="small"
-                        color="secondary"
-                        className={classes.links}
-                    >
                         Learn More
                     </Button>
                 </CardActions>
@@ -140,7 +126,7 @@ export default function MediaCard() {
                             component="h2"
                             className={classes.title}
                         >
-                            Value Prop 3
+                            Multi-Sensory Learning
                         </Typography>
                         <Typography
                             variant="body2"
@@ -153,13 +139,6 @@ export default function MediaCard() {
                     </CardContent>
                 </CardActionArea>
                 <CardActions component="h2">
-                    <Button
-                        size="small"
-                        color="secondary"
-                        className={classes.links}
-                    >
-                        Share
-                    </Button>
                     <Button
                         size="small"
                         color="secondary"
