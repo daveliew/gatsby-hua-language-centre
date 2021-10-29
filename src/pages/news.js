@@ -73,11 +73,11 @@ const aboutHuaStyles = {
 
 const Posts = ({ data }) => {
     const [clicked, setClicked] = useState(false);
-    const [postID, setPostID] = useState("cG9zdDozMDE3");
+    const [postID, setPostID] = useState("cG9zdDozNzU0");
 
     const handleClick = (e) => {
         console.log("target", e.target.id);
-        setPostID(e.target.id);
+        // setPostID(e.target.id);
 
         setClicked(!clicked);
     };
