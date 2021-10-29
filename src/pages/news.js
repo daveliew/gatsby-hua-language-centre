@@ -6,7 +6,7 @@ import { Button, Card } from "@material-ui/core";
 const pageStyles = {
     display: "flex",
     flexDirection: "column",
-    width: "100%",
+    width: "90%",
     backgroundColor: "#fef6f0",
 };
 
@@ -75,9 +75,11 @@ const Posts = ({ data }) => {
     const [clicked, setClicked] = useState(false);
     const [postID, setPostID] = useState("cG9zdDozMDE3");
 
-    const handleClick = () => {
+    const handleClick = (e) => {
+        console.log("target", e.target.id);
+        setPostID(e.target.id);
+
         setClicked(!clicked);
-        // setPostID(node.id);
     };
 
     return clicked ? (
@@ -155,22 +157,27 @@ const Posts = ({ data }) => {
                     </h1>
                     <p>
                         Read more about our current affairs and upcoming
-                        programs. We have bite-sized Mandarin classes for those
-                        who want a quick read. <br />
+                        programmes.
+                        <br /> We have bite-sized Mandarin classes for those who
+                        want a quick read. <br />
                         Do have a browse, and do let us know if there is
                         anything you would like us to write on.
                     </p>
                 </container>
                 <container style={containerStyles}>
                     {data.allWpPost.nodes.map((node, i) => (
-                        <div style={cardStyles}>
+                        <div style={cardStyles} key={i}>
                             <img
                                 src={node?.featuredImage?.node?.mediaItemUrl}
                                 style={imageStyles}
                             />
                             <h3>{node?.title}</h3>
+                            {/* can't seem to pass node id for render */}
+                            {/* <p>{node?.id}</p> */}
 
-                            <Button onClick={handleClick}>Learn more</Button>
+                            <Button id={node?.id} onClick={handleClick}>
+                                Learn more
+                            </Button>
                         </div>
                     ))}
                 </container>

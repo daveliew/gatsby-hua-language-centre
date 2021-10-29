@@ -14,6 +14,8 @@ const Programmes = () => {
         <Layout pageTitle="Programmes">
             <div style={pageStyles}>
                 <h1>Playgroup (18mth - 3yrs)</h1>
+                <br />
+                <br />
                 <p>
                     Our Playgroup Programmes are adult-accompanied classes which
                     allow children to be exposed to Mandarin at a young age.
